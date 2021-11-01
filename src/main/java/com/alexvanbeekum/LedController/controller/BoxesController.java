@@ -33,7 +33,6 @@ public class BoxesController {
     @GetMapping(path="/boxes/{set_id}")
     public @ResponseBody
     Iterable<Boxes> getAllBoxes(@PathVariable int set_id) {
-        System.out.println(set_id);
         return bRepository.findAllSetId(set_id);
     }
 
