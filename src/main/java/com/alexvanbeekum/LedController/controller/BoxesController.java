@@ -15,6 +15,7 @@ import javax.transaction.Transactional;
 public class BoxesController {
     @Autowired
     private BoxesRepository bRepository;
+    @Autowired
     private SettingsRepository sRepository;
 
     @PostMapping(path = "/box")
