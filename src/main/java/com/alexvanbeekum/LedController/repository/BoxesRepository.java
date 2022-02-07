@@ -15,4 +15,17 @@ public interface BoxesRepository extends CrudRepository<Boxes, Integer> {
     @Modifying
     @Query("update Boxes b set b.r = ?3, b.g = ?4, b.b= ?5 where b.set_id = ?1 and b.box_id = ?2")
     void updateBox(Integer set_id, Integer box_id, Integer r, Integer g, Integer b);
+
+    @Modifying
+    @Query("update Boxes b set b.r = ?3 where b.set_id = ?1 and b.box_id = ?2")
+    void updateBoxR(Integer set_id, Integer box_id, Integer r);
+
+    @Modifying
+    @Query("update Boxes b set b.g = ?3 where b.set_id = ?1 and b.box_id = ?2")
+    void updateBoxG(Integer set_id, Integer box_id, Integer g);
+
+    @Modifying
+    @Query("update Boxes b set b.b = ?3 where b.set_id = ?1 and b.box_id = ?2")
+    void updateBoxB(Integer set_id, Integer box_id ,Integer b);
+
 }
