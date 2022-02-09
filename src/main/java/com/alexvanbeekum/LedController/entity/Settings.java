@@ -15,6 +15,12 @@ public class Settings {
 
     private Integer brightness;
 
+    private Integer day_brightness;
+
+    private Integer night_brightness;
+
+    private boolean on_off;
+
     public Settings() {}
 
     public Settings(Integer set_id) {
@@ -54,5 +60,29 @@ public class Settings {
 
     public void setBrightness(Integer brightness) {
         this.brightness = brightness;
+    }
+
+    public Integer getDay_brightness() {
+        return day_brightness;
+    }
+
+    public void setDay_brightness(Integer day_brightness) {
+        this.day_brightness = day_brightness;
+    }
+
+    public Integer getNight_brightness() {
+        return night_brightness;
+    }
+
+    public void setNight_brightness(Integer night_brightness) {
+        this.night_brightness = night_brightness;
+    }
+
+    public boolean isOn_off() {
+        return on_off;
+    }
+
+    public void setOn_off(boolean on_off) {
+        this.on_off = on_off;
     }
 }
